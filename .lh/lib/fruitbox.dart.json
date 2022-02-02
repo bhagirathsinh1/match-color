@@ -1,0 +1,50 @@
+{
+    "sourceFile": "lib/fruitbox.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1643805713665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1643806415479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+// ignore_for_file: prefer_const_constructors\r\n+\r\n import 'package:flutter/material.dart';\r\n \r\n class FruitBox extends StatelessWidget {\r\n   final String boxIcon;\r\n"
+                },
+                {
+                    "date": 1643806425477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-// ignore_for_file: prefer_const_constructors\r\n+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, use_key_in_widget_constructors\r\n \r\n import 'package:flutter/material.dart';\r\n \r\n class FruitBox extends StatelessWidget {\r\n"
+                },
+                {
+                    "date": 1643806447731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,12 @@\n       data: boxIcon,\r\n       child: Center(\r\n         child: Text(\r\n           boxIcon,\r\n-          style: TextStyle(fontSize: 50.0, decoration: TextDecoration.none),\r\n+          style: TextStyle(\r\n+              fontSize: 50.0,\r\n+              decoration: TextDecoration.none,\r\n+              color: Colors.green),\r\n         ),\r\n       ),\r\n       feedback: Container(\r\n         height: 120.0,\r\n"
+                },
+                {
+                    "date": 1643806527609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,12 +29,7 @@\n             style: TextStyle(fontSize: 50.0, decoration: TextDecoration.none),\r\n           ),\r\n         ),\r\n       ),\r\n-      childWhenDragging: Container(\r\n-        height: 120.0,\r\n-        width: 120.0,\r\n-        color: Colors.transparent,\r\n-      ),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1643806565769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n               color: Colors.green),\r\n         ),\r\n       ),\r\n       feedback: Container(\r\n-        height: 120.0,\r\n-        width: 120.0,\r\n+        height: 100.0,\r\n+        width: 100.0,\r\n         color: Colors.transparent,\r\n         child: Center(\r\n           child: Text(\r\n             boxIcon,\r\n"
+                },
+                {
+                    "date": 1643806590004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n       ),\r\n       feedback: Container(\r\n         height: 100.0,\r\n         width: 100.0,\r\n-        color: Colors.transparent,\r\n+        color: Colors.black,\r\n         child: Center(\r\n           child: Text(\r\n             boxIcon,\r\n             style: TextStyle(fontSize: 50.0, decoration: TextDecoration.none),\r\n"
+                },
+                {
+                    "date": 1643806643892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,17 +19,22 @@\n               color: Colors.green),\r\n         ),\r\n       ),\r\n       feedback: Container(\r\n-        height: 100.0,\r\n-        width: 100.0,\r\n-        color: Colors.black,\r\n-        child: Center(\r\n-          child: Text(\r\n-            boxIcon,\r\n-            style: TextStyle(fontSize: 50.0, decoration: TextDecoration.none),\r\n+          // height: 120.0,\r\n+          // width: 120.0,\r\n+          // color: Colors.transparent,\r\n+          // child: Center(\r\n+          //   child: Text(\r\n+          //     boxIcon,\r\n+          //     style: TextStyle(fontSize: 50.0, decoration: TextDecoration.none),\r\n+          //   ),\r\n+          // ),\r\n           ),\r\n-        ),\r\n-      ),\r\n+      // childWhenDragging: Container(\r\n+      //   height: 120.0,\r\n+      //   width: 120.0,\r\n+      //   color: Colors.transparent,\r\n+      // ),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1643806678577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,18 +19,18 @@\n               color: Colors.green),\r\n         ),\r\n       ),\r\n       feedback: Container(\r\n-          // height: 120.0,\r\n-          // width: 120.0,\r\n-          // color: Colors.transparent,\r\n-          // child: Center(\r\n-          //   child: Text(\r\n-          //     boxIcon,\r\n-          //     style: TextStyle(fontSize: 50.0, decoration: TextDecoration.none),\r\n-          //   ),\r\n-          // ),\r\n+        height: 100.0,\r\n+        width: 100.0,\r\n+        color: Colors.transparent,\r\n+        child: Center(\r\n+          child: Text(\r\n+            boxIcon,\r\n+            style: TextStyle(fontSize: 50.0, decoration: TextDecoration.none),\r\n           ),\r\n+        ),\r\n+      ),\r\n       // childWhenDragging: Container(\r\n       //   height: 120.0,\r\n       //   width: 120.0,\r\n       //   color: Colors.transparent,\r\n"
+                }
+            ],
+            "date": 1643805713665,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass FruitBox extends StatelessWidget {\r\n  final String boxIcon;\r\n\r\n  FruitBox(this.boxIcon);\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Draggable(\r\n      data: boxIcon,\r\n      child: Center(\r\n        child: Text(\r\n          boxIcon,\r\n          style: TextStyle(fontSize: 50.0, decoration: TextDecoration.none),\r\n        ),\r\n      ),\r\n      feedback: Container(\r\n        height: 120.0,\r\n        width: 120.0,\r\n        color: Colors.transparent,\r\n        child: Center(\r\n          child: Text(\r\n            boxIcon,\r\n            style: TextStyle(fontSize: 50.0, decoration: TextDecoration.none),\r\n          ),\r\n        ),\r\n      ),\r\n      childWhenDragging: Container(\r\n        height: 120.0,\r\n        width: 120.0,\r\n        color: Colors.transparent,\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

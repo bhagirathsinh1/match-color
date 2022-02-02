@@ -1,0 +1,22 @@
+{
+    "sourceFile": "lib/diffrent_drag_target.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1643805674913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1643805737243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'package:dragdemo/main.dart';\r\n+import 'package:dragdemo/fruitbox.dart';\r\n import 'package:flutter/material.dart';\r\n \r\n class DiffrentDragTargets extends StatelessWidget {\r\n   const DiffrentDragTargets(\r\n"
+                }
+            ],
+            "date": 1643805674913,
+            "name": "Commit-0",
+            "content": "import 'package:dragdemo/main.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\nclass DiffrentDragTargets extends StatelessWidget {\r\n  const DiffrentDragTargets(\r\n      {Key? key,\r\n      required this.onInsideTargetChanged,\r\n      required this.onActiveEmojiChanged,\r\n      required this.dragBoxactiveEmoji,\r\n      required this.currentEmojiDragBox,\r\n      required this.dragBoxColor})\r\n      : super(key: key);\r\n  final Color dragBoxColor;\r\n  final String dragBoxactiveEmoji;\r\n  final String currentEmojiDragBox;\r\n  final ValueChanged<bool> onInsideTargetChanged;\r\n  final ValueChanged<String> onActiveEmojiChanged;\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return DragTarget<String>(\r\n      builder: (context, data, rejectedData) {\r\n        return Container(\r\n          width: 100,\r\n          height: 100,\r\n          color: dragBoxColor,\r\n          child: dragBoxactiveEmoji == '' ? null : FruitBox(dragBoxactiveEmoji),\r\n        );\r\n      },\r\n      onAccept: (emoji) {\r\n        onInsideTargetChanged(true);\r\n        onActiveEmojiChanged(emoji);\r\n      },\r\n      onWillAccept: (emoji) {\r\n        return emoji == currentEmojiDragBox ? true : false;\r\n      },\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}
