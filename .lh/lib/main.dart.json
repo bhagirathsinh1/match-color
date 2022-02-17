@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 155,
+            "activePatchIndex": 158,
             "patches": [
                 {
                     "date": 1643714010371,
@@ -628,6 +628,18 @@
                 {
                     "date": 1643808683924,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -209,9 +209,9 @@\n     );\r\n \r\n     // set up the AlertDialog\r\n     AlertDialog alert = AlertDialog(\r\n-      title: Text(\"Cleared!\", style: TextStyle(color: Colors.green)),\r\n+      title: Text(\"Cleared! \", style: TextStyle(color: Colors.green)),\r\n       content: Text(\"Score 5\", style: TextStyle(color: Colors.green)),\r\n       actions: [\r\n         okButton,\r\n       ],\r\n"
+                },
+                {
+                    "date": 1645071911690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n       ),\r\n       body: Center(\r\n         child: Padding(\r\n           padding: const EdgeInsets.all(8.0),\r\n-          child: Row(\r\n+          child: Column(\r\n             mainAxisAlignment: MainAxisAlignment.spaceBetween,\r\n             children: [\r\n               Column(\r\n                 mainAxisAlignment: MainAxisAlignment.spaceAround,\r\n"
+                },
+                {
+                    "date": 1645071931310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n           padding: const EdgeInsets.all(8.0),\r\n           child: Column(\r\n             mainAxisAlignment: MainAxisAlignment.spaceBetween,\r\n             children: [\r\n-              Column(\r\n+              Row(\r\n                 mainAxisAlignment: MainAxisAlignment.spaceAround,\r\n                 children: [\r\n                   FruitBox(mangoEmoji),\r\n                   FruitBox(appleEmoji),\r\n@@ -75,9 +75,9 @@\n                   FruitBox(kiwiEmoji),\r\n                   FruitBox(bananaEmoji),\r\n                 ],\r\n               ),\r\n-              Column(\r\n+              Row(\r\n                 mainAxisAlignment: MainAxisAlignment.center,\r\n                 // ignore: prefer_const_literals_to_create_immutables\r\n                 children: [\r\n                   Text(\r\n"
+                },
+                {
+                    "date": 1645071966243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n                     style: TextStyle(color: Colors.green, fontSize: 20),\r\n                   ),\r\n                 ],\r\n               ),\r\n-              Column(\r\n+              Row(\r\n                 mainAxisAlignment: MainAxisAlignment.spaceAround,\r\n                 // ignore: prefer_const_literals_to_create_immutables\r\n                 children: [\r\n                   DiffrentDragTargets(\r\n"
                 }
             ],
             "date": 1643714010371,

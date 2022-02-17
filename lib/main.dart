@@ -63,10 +63,10 @@ class _DragScreenState extends State<DragScreen> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Row(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   FruitBox(mangoEmoji),
@@ -76,7 +76,7 @@ class _DragScreenState extends State<DragScreen> {
                   FruitBox(bananaEmoji),
                 ],
               ),
-              Column(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
@@ -86,7 +86,7 @@ class _DragScreenState extends State<DragScreen> {
                   ),
                 ],
               ),
-              Column(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
